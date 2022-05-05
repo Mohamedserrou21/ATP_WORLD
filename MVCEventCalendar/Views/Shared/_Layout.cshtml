@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -  ATP  WORLD TOUR</title>
+    @*<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("ATP_WORLD", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href=" https://localhost:44391/Joueurs">Joueurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://localhost:44391/Rencontres">Rencontre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:50869/">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://localhost:44391/Sponsors">Sponsor</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://localhost:44391/Rankings">Gestion-Rankings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://localhost:44391/Subventions">Subvention</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://localhost:44391/Tournois">Tournois</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://localhost:44391/Gains">Gains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://localhost:44391/RANKController2">Classement</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>
